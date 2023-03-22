@@ -5,8 +5,12 @@ Developer Name: Siarhei Kanavalchyk
 Developer Email: Siarhei_Kanavalchyk@epam.com   
 
 ### Subtask 1: Implement the foundational structure of the application
-Time spent on this subtask: [insert time here]
-Comments: there is some warm-up time to start using Copilot
+Time spent on this subtask: ~ 4 hour
+Comments:
+    The full time is ~4+ hour:
+        I decided to let copilot do full work for me, so sometimes spend lot of time to describe what I need exact. Build the solution from scratch using console batch. There is some warm-up time to start using Copilot
+        - 3+ to understand the working approach with copilot. Lot of failed attempts without any work proposal. 
+        - the final attempt requires less 1 hour to build the working solution.
 
 ### Subtask 2: Implement the basic data models and database schema
 Time spent on this subtask: [insert time here]
