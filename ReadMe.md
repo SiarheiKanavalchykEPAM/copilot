@@ -17,7 +17,7 @@ Time spent on this subtask: 4h
 Comments: Very helpful in the recurring operations, but from time to time can make it differently (sor example differently impelemtns same method in repository). Also need to review the resulted code in order to fix some wrong property names (BookID instead of BookId) and can generate redundant fields
 
 ### Subtask 3: Implement authentication for application
-Time spent on this subtask: [insert time here]
+Time spent on this subtask: 
 Comments: 
 
 ### Subtask 4: Implement a mechanism for adding and editing a book
