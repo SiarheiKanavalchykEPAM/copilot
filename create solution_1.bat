@@ -56,4 +56,15 @@ cd bookDestributedLibrary.Data
 dotnet tool install --global dotnet-ef
 
 # create DbContext
-dotnet ef dbcontext scaffold "Server=(localdb)\MSSQLLocalDB;Database=book-library;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -c DbApplicationContext
+dotnet ef dbcontext scaffold "Server=(localdb)\MSSQLLocalDB;Database=book-library;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -c ApplicationDbContext
+
+# go to Web project folder
+cd bookDestributedLibrary.Web
+
+# Add Book Details page with controller and view
+dotnet aspnet-codegenerator controller -name BookDetailsController --relativeFolderPath Controllers --useDefaultLayout
+
+# Add Search Book page with controller and view
+dotnet aspnet-codegenerator controller -name SearchBookController --relativeFolderPath Controllers --useDefaultLayout
+
+

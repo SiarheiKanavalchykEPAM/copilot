@@ -13,8 +13,8 @@ Comments:
         - the final attempt requires less 1 hour to build the working solution.
 
 ### Subtask 2: Implement the basic data models and database schema
-Time spent on this subtask: [insert time here]
-Comments: 
+Time spent on this subtask: 4h
+Comments: Very helpful in the recurring operations, but from time to time can make it differently (sor example differently impelemtns same method in repository). Also need to review the resulted code in order to fix some wrong property names (BookID instead of BookId) and can generate redundant fields
 
 ### Subtask 3: Implement authentication for application
 Time spent on this subtask: [insert time here]
