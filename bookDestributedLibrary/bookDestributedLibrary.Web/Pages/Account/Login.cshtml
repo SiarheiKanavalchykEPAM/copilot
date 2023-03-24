@@ -1,0 +1,30 @@
+@page
+@model bookDestributedLibrary.Application.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+/* UserName */
+@Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
+<div class="col-md-10">
+    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+</div>
+
+/* Password */
+@Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+<div class="col-md-10">
+    @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+</div>
+
+
+/* Login button */
+<div class="col-md-offset-2 col-md-10">
+    <input type="submit" value="Login" class="btn btn-default" />
+</div>
+
+/* Register button */
+<div class="col-md-offset-2 col-md-10">
+    @Html.ActionLink("Register", "Register", "Account", new { area = "" }, new { @class = "btn btn-default" })
+</div>

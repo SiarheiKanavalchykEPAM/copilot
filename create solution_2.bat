@@ -4,6 +4,10 @@ cd bookDestributedLibrary.Data
 # create migration
 dotnet ef migrations add InitialCreate
 
+# refresh migration
+dotnet ef migrations remove
+
+
 # Update database according to the changes in the model
 dotnet ef database update
 

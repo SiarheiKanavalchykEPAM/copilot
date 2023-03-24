@@ -17,12 +17,14 @@ Time spent on this subtask: 4h
 Comments: Very helpful in the recurring operations, but from time to time can make it differently (sor example differently impelemtns same method in repository). Also need to review the resulted code in order to fix some wrong property names (BookID instead of BookId) and can generate redundant fields
 
 ### Subtask 3: Implement authentication for application
-Time spent on this subtask: 
-Comments: 
+Time spent on this subtask: Unsuccess - 4+ hour
+Comments: Doen't provide working solution. Difficult to implement using co-pilot. Cannot define the example for the pages, have an issue with redirecting, but don't find the solution and stop looking due to time lack. 
 
 ### Subtask 4: Implement a mechanism for adding and editing a book
-Time spent on this subtask: [insert time here]
-Comments: 
+Time spent on this subtask: Not-finished - 1 hour
+Comments: Co-pilot is really good for generating data and some sckeleton, but do a lot of mistakes:
+ - mixed async/non-async methods (generate class usages without taking into account iterface, for example using BookRepository - always provide non-async)
+ - trying to implement a new methods instead of using existing ones, need more 
 
 ### Subtask 5: Implement a dashboard with available books and the ability to filter them
 Time spent on this subtask: [insert time here]

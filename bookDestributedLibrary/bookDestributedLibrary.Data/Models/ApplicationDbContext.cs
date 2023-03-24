@@ -19,13 +19,19 @@ public partial class ApplicationDbContext : DbContext
     {
     }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=book-library;Trusted_Connection=True;");
+
     public virtual DbSet<Book> Books { get; set; }
     public virtual DbSet<LoanHistory> LoanHistory { get; set; }
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<ReservationQueue> ReservationQueues { get; set; }
+    public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         //Add 100 random Users using Faker
         for (int i = 1; i < 101; i++)
         {
@@ -82,5 +88,9 @@ public partial class ApplicationDbContext : DbContext
                 ReservationDate = Faker.Date.Past()
             });
         }
+
+        modelBuilder.Entity<ApplicationUser>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
     }
 }
