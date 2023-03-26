@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\bookDestributedLibrary3.Data\bookDestributedLibrary.Data.csproj" />
+    <ProjectReference Include="..\bookDestributedLibrary.data\bookDestributedLibrary.data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -19,7 +19,7 @@ public class Book
     public int NumberOfPages { get; set; }
     public string Tags { get; set; }
     public int ContributorId { get; set; }
-    public int CurrentKeeperId { get; set; }
+    public int? CurrentKeeperId { get; set; }
 
     [ForeignKey("ContributorId")]
     public User Contributor { get; set; }

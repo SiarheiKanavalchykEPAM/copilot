@@ -1,4 +1,5 @@
 ﻿@page
+@inject IBookService BookService
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -8,3 +9,96 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@{
+    //get current user
+    var user = await UserManager.GetUserAsync(User); 
+    var ownBooks = await BookService.GetOwnBooks(user.Id);
+    var borrowedBooks = await BookService.GetBorrowedBooks(user.Id);
+}
+
+// Borrowed books
+@if (borrowedBooks.Any())
+{
+    <h2>Borrowed books</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Borrower
+                </th>
+                <th>
+                    Borrowed date
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in borrowedBooks)
+            {
+                <tr>
+                    <td>
+                        @book.Title
+                    </td>
+                    <td>
+                        @book.Author
+                    </td>
+                    <td>
+                        @book.Borrower
+                    </td>
+                    <td>
+                        @book.BorrowedDate
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+// Own books
+@if (ownBooks.Any())
+{
+    <h2>Own books</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Borrower
+                </th>
+                <th>
+                    Borrowed date
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in ownBooks)
+            {
+                <tr>
+                    <td>
+                        @book.Title
+                    </td>
+                    <td>
+                        @book.Author
+                    </td>
+                    <td>
+                        @book.Borrower
+                    </td>
+                    <td>
+                        @book.BorrowedDate
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

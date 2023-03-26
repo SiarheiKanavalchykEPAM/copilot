@@ -22,7 +22,9 @@ Comments: Doen't provide working solution. Difficult to implement using co-pilot
 
 ### Subtask 4: Implement a mechanism for adding and editing a book
 Time spent on this subtask: Not-finished - 1 hour
-Comments: 
+Comments: Co-pilot is really good for generating data and some sckeleton, but do a lot of mistakes:
+ - mixed async/non-async methods (generate class usages without taking into account iterface, for example using BookRepository - always provide non-async)
+ - trying to implement a new methods instead of using existing ones, need more detailed instructions
 
 ### Subtask 5: Implement a dashboard with available books and the ability to filter them
 Time spent on this subtask: [insert time here]
